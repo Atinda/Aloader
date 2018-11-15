@@ -20,7 +20,7 @@ export default new Router({
       component: login
     },
     {
-      path: '/home',                  // 主页
+      path: '/home',                  // 主页页面
       component: home,
       children: [{
           path: '/',
