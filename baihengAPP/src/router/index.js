@@ -1,21 +1,23 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '@/components/login'
-import Home from '@/components/home'
+import Vue from 'vue';
+import Router from 'vue-router';
+// import { resolve } from 'path';
 
-Vue.use(Router)
+Vue.use(Router);
+
+const routes = [
+  {
+    path: '/',
+    name: 'Login',
+    component: resolve =>require(['@/components/login'],resolve)
+  },
+  {
+    path: '/Home',
+    name: 'Home',
+    component: resolve =>require(['@/components/home'],resolve)
+  }
+];
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Login',
-      component: Login
-    },
-    {
-      path: '/Home',
-      name: 'Home',
-      component: Home
-    }
-  ]
-})
+  mode:'history',
+  routes
+});
