@@ -19,4 +19,4 @@ export default new vuex.Store({
         login,
         home
     }
-})
+});
