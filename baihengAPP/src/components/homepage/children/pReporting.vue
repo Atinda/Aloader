@@ -1,64 +1,161 @@
 <template>
   <div class="pSchedule">
-     <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">生产进度</x-header>
+     <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">生产报工</x-header>
+      <div class="pReporting-content">
+            <flow>
+                <flow-state state="1" title="选择机台" :is-done="isdone1"></flow-state>
+                <flow-line :is-done="isdone1"></flow-line>
+                <flow-state state="2" title="选择时间" :is-done="isdone2"></flow-state>
+                <flow-line :is-done="isdone2"></flow-line>
+                <flow-state state="3" title="生产米数" :is-done="isdone3"></flow-state>
+                <flow-line :is-done="isdone3"></flow-line>
+                <flow-state state="4" title="报工完成" :is-done="isdone4"></flow-state>
+            </flow>
+            <div class="tabview">
+              <div v-transfer-dom>
+                <loading :show="show"></loading>
+              </div>
+              <div class="tabview-car tabview-car-mactype" v-if="active">选择机台
+                <div class="car-info"></div>
+                <x-button class="car-Submission" type="primary" @click.native="nextStep1">下一步</x-button>
+              </div>
+              <div class="tabview-car tabview-car-time" v-if="active1">选择时间
+                <div class="car-info"></div>
+                <x-button class="car-Submission" type="primary" @click.native="prevStep2">上一步</x-button>
+                <x-button class="car-Submission" type="primary" @click.native="nextStep2">下一步</x-button>
+              </div>
+              <div class="tabview-car tabview-car-rice" v-if="active2">生产米数
+                <div class="car-info"></div>
+                <x-button class="car-Submission" type="primary" @click.native="prevStep3">上一步</x-button>
+                <x-button class="car-Submission" type="primary" @click.native="nextStep3">下一步</x-button>
+              </div>
+              <div class="tabview-car tabview-car-sure" v-if="active3">确定报工
+                <div class="car-info"></div>
+                <x-button class="car-Submission" type="primary" @click.native="prevStep4">上一步</x-button>
+                <x-button class="car-Submission" type="primary" @click.native="cancel">取消报工</x-button>
+                <x-button class="car-Submission" type="primary" @click.native="sure">确定报工</x-button>
+              </div>
+            </div>
+        </div>
   </div>
 </template>
 
 <script>
+
+import { TransferDom } from 'vux';
+
 export default {
-  name: 'pSchedule',
-  data () {
+  name: "pSchedule",
+  directives: {
+    TransferDom
+  },
+  data() {
     return {
-    }
-  },
-  methods:{             // 自定义的函数
+      active: true,
+      active1: false,
+      active2: false,
+      active3: false,
+      show: false,
 
+      isdone1:false,
+      isdone2:false,
+      isdone3:false,
+      isdone4:false,
+    };
   },
-  computed:{            // 计算属性
-
+  methods: {
+    // 自定义的函数 
+    nextStep1: function() {
+      this.isdone1 = true;
+      this.active = false;
+      this.active1 = true;
+    },
+    nextStep2: function() {
+      this.isdone2 = true;
+      this.active1 = false;
+      this.active2 = true;
+    },
+    nextStep3: function() {
+      this.isdone3 = true;
+      this.active2 = false;
+      this.active3 = true;
+    },
+    prevStep2: function() {
+      this.isdone1 = false;
+      this.active1 = false;
+      this.active = true;
+      
+    },
+    prevStep3: function() {
+      this.isdone2 = false;
+      this.active2 = false;
+      this.active1 = true;
+    },
+    prevStep4: function() {
+      this.isdone3 = false;
+      this.active3 = false;
+      this.active2 = true;
+    },
+     cancel: function() {
+      this.active3 = false;
+      this.active = true;
+      this.isdone1=false;
+      this.isdone2=false;
+      this.isdone3=false;
+      this.isdone4=false;
+    },
+      sure: function() {
+        this.isdone4 = true;
+      this.$vux.loading.show({
+        text: "提交中···"
+      });
+      setTimeout(() => {
+        this.$vux.loading.hide();
+        this.active3 = false;
+        this.active = true;
+        this.isdone1=false;
+        this.isdone2=false;
+        this.isdone3=false;
+        this.isdone4=false;
+      }, 1500);
+    },
   },
-  watch:{               // 监听属性
-
+  computed: {
+    // 计算属性
   },
-    // 1·实例初始化之后，数据观测和事件配置之前被调用
-  beforeCreate:function(){        
-    console.log('beforeCreate 实例初始化之后钩子执行');
-  },
-    // 2·实例已经创建完成之后被调用,挂载阶段还没开始，$el 属性目前不可见
-  created:function(){             
-    console.log('cteated 实例已经创建完成之后钩子执行...');
-  },
-    // 3·在挂载开始之前被调用：相关的 render 函数首次被调用
-  beforeMount:function(){         
-    console.log('beforeMount 钩子执行在挂载开始之前');
-  },
-    // 4·el被新创建的vm.$el替换，并挂载到实例上去之后调用该钩子
-  mounted:function(){             
-    console.log('mounted 挂载到实例上去之后钩子执行...');
-  },
-    // 5·数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前
-  beforeUpdate:function(){        
-    console.log('beforeUpdate 数据更新时调用钩子执行...');
-  },
-    // 6·由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子
-    //   组件DOM已经更新，现在可以执行依赖于DOM的操作，此处避免更改状态，可能会导致无限更新循环
-  updated:function(){             
-    console.log('updated 钩子执行...');
-  },
-    // 7·实例销毁之前调用，在这一步，实例仍然完全可用
-  beforeDestroy:function(){       
-    console.log('beforeDestroy 实例销毁之前钩子执行...');
-  },
-    // 8·Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。
-  destroyed:function(){           
-    console.log('destroyed 实例销毁后调用钩子执行...');
+  watch: {
+    // 监听属性
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
-.pSchedule{
-    background: #00e6ff;
+.pSchedule {
+  height: 100%;
+  font-size: .4rem;
+  .pReporting-content {
+    height: 100%;
+    .weui-wepay-flow__process {
+      background-color: #00d0ff;
+    }
+    .tabview {
+      height: 100%;
+      .car-Submission {
+        background: #00d0ff;
+      }
+      .weui-toast{
+        width: 3rem;
+        min-height: 4rem;
+        margin-left: 0;
+        left: 22%;
+      }
+      .tabview-car{
+        .car-info{
+          height: 8rem;
+        }
+      }
+    }
+  }
 }
 </style>
 

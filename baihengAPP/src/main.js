@@ -3,7 +3,7 @@ import App from './App';
 import router from './router';
 import store from './store';
 import 'font-awesome/css/font-awesome.css';
-import { Divider ,Group,XInput,Cell,XButton,Tabbar,TabbarItem,XHeader  } from 'vux';
+import { Divider ,Group,XInput,Cell,XButton,Tabbar,TabbarItem,XHeader, Tab,TabItem,Flow, FlowState, FlowLine,Loading,LoadingPlugin } from 'vux';
 
 Vue.component('divider', Divider);
 Vue.component('group', Group);
@@ -13,6 +13,13 @@ Vue.component('x-button', XButton);
 Vue.component('tabbar', Tabbar);
 Vue.component('tabbar-item', TabbarItem);
 Vue.component('x-header', XHeader);
+Vue.component('tab', Tab);
+Vue.component('tab-item', TabItem);
+Vue.component('flow', Flow);
+Vue.component('flow-state', FlowState);
+Vue.component('flow-line', FlowLine);
+Vue.component('loading', Loading);
+Vue.use(LoadingPlugin)
 
 
 new Vue({

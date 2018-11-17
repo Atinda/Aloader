@@ -50,7 +50,7 @@ export default {
 
 <style lang="less" scoped>
 .home {
-  background: #00e6ff;
+  // background: #00e6ff;
   display: flex;
   flex-direction: column;
   height: 100%;
