@@ -1,6 +1,5 @@
-# baiheng
-
-> 百亨APP
+百亨APP
+=======
 
 ## Build Setup
 
@@ -17,8 +16,17 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+项目依赖库
+---------
 
-# 项目结构
+* [vuex](https://vuex.vuejs.org)            项目的状态管理库
+* [VUX](https://vux.li)                     一个基于vue的移动端ui库
+* [vue-router](https://router.vuejs.org)    使用官方推荐的路由
+* [less](http://lesscss.org/)               预编译语言
+
+项目结构
+--------
+
 ```javascript
 src
     -api                            // 所有请求API存放文件
