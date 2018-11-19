@@ -41,5 +41,5 @@ npm run build --report
 │   ├── store                          // 项目的状态管理vuex
 │   ├── App.vue                        // 整个工程项目的页面入口文件
 │   └── main.js                        // 程序入口文件，加载各种公共组件
-└── index.html                         // 入口html文件
+├── index.html                         // 入口html文件
 ```
