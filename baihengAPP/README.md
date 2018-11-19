@@ -32,13 +32,14 @@ npm run build --report
 ├── config                             // 项目打包路径
 ├── src                                // 源码目录
 │   ├── api                            // 所有请求API的存放文件
-│   │   └── imges                      // 存放图片
+│   ├── assets                         // 公共资源
+│   │   └── imges                      // 图片
 │   ├── common                         // 公共组件
 │   ├── components                     // 各个页面的视图文件
-│   ├── router                         // 路由文件
-│   │   └── index.js                   // 路由的配置及跳转
+│   ├── router                         // 路由
+│   │   └── index.js                   // 路由的配置
 │   ├── store                          // 项目的状态管理vuex
 │   ├── App.vue                        // 整个工程项目的页面入口文件
-│   └──  main.js                       // 程序入口文件，加载各种公共组件
+│   └── main.js                        // 程序入口文件，加载各种公共组件
 └── index.html                         // 入口html文件
 ```
