@@ -3,7 +3,10 @@ import App from './App';
 import router from './router';
 import store from './store';
 import 'font-awesome/css/font-awesome.css';
-import { Divider ,Group,XInput,Cell,XButton,Tabbar,TabbarItem,XHeader, Tab,TabItem,Flow, FlowState, FlowLine,Loading,LoadingPlugin } from 'vux';
+import { Divider ,Group,XInput,Cell,XButton,Tabbar,TabbarItem,XHeader,
+   Tab,TabItem,Flow, FlowState, FlowLine,Loading,LoadingPlugin,
+   Flexbox,FlexboxItem,
+  } from 'vux';
 
 Vue.component('divider', Divider);
 Vue.component('group', Group);

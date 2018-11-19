@@ -15,27 +15,41 @@
               <div v-transfer-dom>
                 <loading :show="show"></loading>
               </div>
-              <div class="tabview-car tabview-car-mactype" v-if="active">选择机台
-                <div class="car-info"></div>
+              <div class="tabview-car tabview-car-mactype" v-if="active">
                 <x-button class="car-Submission" type="primary" @click.native="nextStep1">下一步</x-button>
+                 <div class="car-info">选择机台</div>
               </div>
-              <div class="tabview-car tabview-car-time" v-if="active1">选择时间
-                <div class="car-info"></div>
+              <div class="tabview-car tabview-car-time" v-if="active1">
+                
                 <x-button class="car-Submission" type="primary" @click.native="prevStep2">上一步</x-button>
                 <x-button class="car-Submission" type="primary" @click.native="nextStep2">下一步</x-button>
+                <div class="car-info">选择时间</div>
               </div>
-              <div class="tabview-car tabview-car-rice" v-if="active2">生产米数
-                <div class="car-info"></div>
+              <div class="tabview-car tabview-car-rice" v-if="active2">
+                
                 <x-button class="car-Submission" type="primary" @click.native="prevStep3">上一步</x-button>
                 <x-button class="car-Submission" type="primary" @click.native="nextStep3">下一步</x-button>
+                <div class="car-info">生产米数</div>
               </div>
-              <div class="tabview-car tabview-car-sure" v-if="active3">确定报工
-                <div class="car-info"></div>
+              <div class="tabview-car tabview-car-sure" v-if="active3">
+                
                 <x-button class="car-Submission" type="primary" @click.native="prevStep4">上一步</x-button>
                 <x-button class="car-Submission" type="primary" @click.native="cancel">取消报工</x-button>
                 <x-button class="car-Submission" type="primary" @click.native="sure">确定报工</x-button>
+                <div class="car-info">确定报工</div>
               </div>
             </div>
+            <!-- <flexbox>
+              <flexbox-item>
+                <x-button type="default">default</x-button>
+              </flexbox-item>
+              <flexbox-item>
+                <x-button type="primary">primary</x-button>
+              </flexbox-item>
+              <flexbox-item>
+                <x-button type="warn">Delete</x-button>
+              </flexbox-item>
+            </flexbox> -->
         </div>
   </div>
 </template>
@@ -151,7 +165,7 @@ export default {
       }
       .tabview-car{
         .car-info{
-          height: 8rem;
+          height: 5rem;
         }
       }
     }

@@ -151,7 +151,7 @@ export default {
       }
       .tabview-car{
         .car-info{
-          height: 8rem;
+          height: 6rem;
         }
       }
     }
