@@ -19,11 +19,12 @@ npm run build --report
 项目依赖库
 ---------
 
-* [vue](https://cn.vuejs.org)              项目前端使用的主要框架
-* [vuex](https://vuex.vuejs.org)            项目的状态管理库
-* [VUX](https://vux.li)                     一个基于vue的移动端ui库
-* [vue-router](https://router.vuejs.org)    使用官方推荐的路由
-* [less](http://lesscss.org)                预编译语言
+* [vue](https://cn.vuejs.org)                           项目前端使用的主要框架
+* [vuex](https://vuex.vuejs.org)                        项目的状态管理库
+* [VUX](https://vux.li)                                 一个基于vue的移动端ui库
+* [vue-router](https://router.vuejs.org)                使用官方推荐的路由
+* [less](http://lesscss.org)                            预编译语言
+* [font-awesome](http://fontawesome.dashgame.com)       项目使用的主要图标库
 
 项目结构
 --------
