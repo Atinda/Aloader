@@ -1,6 +1,7 @@
 百亨APP
 =======
 
+
 ## Build Setup
 
 ``` bash
@@ -19,29 +20,51 @@ npm run build --report
 项目依赖库
 ---------
 
-* [vue](https://cn.vuejs.org)                           项目前端使用的主要框架
+* [vue](https://cn.vuejs.org)                           项目前端使用的主要框架技术栈
 * [vuex](https://vuex.vuejs.org)                        项目的状态管理库
-* [VUX](https://vux.li)                                 一个基于vue的移动端ui库
+* [VUX](https://vux.li)                                 使用基于vue的移动端ui库
 * [vue-router](https://router.vuejs.org)                使用官方推荐的路由
 * [less](http://lesscss.org)                            预编译语言
 * [font-awesome](http://fontawesome.dashgame.com)       项目使用的主要图标库
+
 
 项目结构
 --------
 
 ```
 ├── build                              // webpack配置文件
-├── config                             // 项目打包路径
+├── config                             // 项目打包路径文件
 ├── src                                // 源码目录
 │   ├── api                            // 所有请求API的存放文件
-│   ├── assets                         // 公共资源
-│   │   └── imges                      // 图片
-│   ├── common                         // 公共组件
-│   ├── components                     // 各个页面的视图文件
-│   ├── router                         // 路由
+│   ├── assets                         // 公共资源文件
+│   │   └── images                     // 图片文件
+│   │       ├── homepage               // 主页图片
+│   │       └── logo                   // logo标识
+│   ├── common                         // 公共组件文件
+│   ├── components                     // 页面的视图文件
+│   │   ├── homepage                   // 首页视图文件
+│   │   ├── information                // 消息视图文件
+│   │   ├── mailist                    // 联系人视图文件
+│   │   ├── user                       // 个人中心视图文件
+│   │   ├── home.vue                   // 主页视图
+│   │   └── login.vue                  // 登陆视图
+│   ├── router                         // 路由文件
 │   │   └── index.js                   // 路由的配置
-│   ├── store                          // 项目的状态管理vuex
-│   ├── App.vue                        // 整个工程项目的页面入口文件
-│   └── main.js                        // 程序入口文件，加载各种公共组件
+│   ├── store                          // 项目的状态管理vuex文件
+│   ├── App.vue                        // 整个工程项目的页面入口视图
+│   └── main.js                        // 程序入口js，加载各种公共组件
 ├── index.html                         // 入口html文件
+
 ```
+
+项目编码规范
+-------
+命名要语义化
+├──命名
+│   ├── 文件             // 以驼峰命名
+│   ├── 页面视图         // 以驼峰命名
+│   ├── 函数             // 以驼峰命名
+│   ├── css
+│   │   ├── class类     // 以驼峰+中划线- calss-name 子元素开头包含一个父元素的类名
+│   │   └── id          // 以驼峰+下划线——  idName_childreName 子元素开头包含一个父元素的id
+├──
