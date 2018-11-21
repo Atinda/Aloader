@@ -59,6 +59,7 @@ npm run build --report
 
 项目编码规范
 -------
+```
 命名要语义化
 ├──命名
 │   ├── 文件             // 以驼峰命名
@@ -68,3 +69,5 @@ npm run build --report
 │   │   ├── class类     // 以驼峰+中划线- calss-name 子元素开头包含一个父元素的类名
 │   │   └── id          // 以驼峰+下划线——  idName_childreName 子元素开头包含一个父元素的id
 ├──
+
+```
