@@ -39,7 +39,7 @@
                 <div class="car-info">确定报工</div>
               </div>
             </div>
-            <!-- <flexbox>
+            <flexbox>
               <flexbox-item>
                 <x-button type="default">default</x-button>
               </flexbox-item>
@@ -49,7 +49,7 @@
               <flexbox-item>
                 <x-button type="warn">Delete</x-button>
               </flexbox-item>
-            </flexbox> -->
+            </flexbox>
         </div>
   </div>
 </template>

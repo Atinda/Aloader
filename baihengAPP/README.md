@@ -42,7 +42,7 @@ npm run build --report
 │   │   │   ├── homepage                        // 主页图片
 │   │   │   └── logo                            // logo标识
 │   │   ├── scripts                             // script文件
-│   │   └── styles                              // style样式文件
+│   │   └── styles                              // style文件
 │   ├── common                                  // 公共组件文件
 │   ├── components                              // 页面的视图文件
 │   │   ├── homepage                            // 首页视图文件
@@ -58,8 +58,15 @@ npm run build --report
 │   │   │   │   └── qManagement.vue             // 品质管理视图
 │   │   │   └── homepage.vue                    // 首页视图
 │   │   ├── information                         // 消息视图文件
+│   │   │   ├── children                        // 子视图文件
+│   │   │   │   └── vchat.vue                   // 生产进度视图
+│   │   │   └── information.vue                 // 消息视图
 │   │   ├── mailist                             // 联系人视图文件
+│   │   │   └── mailist.vue                     // 联系人视图
 │   │   ├── user                                // 个人中心视图文件
+│   │   │   ├── children                        // 子视图文件
+│   │   │   │   └── userInfo.vue                // 个人信息视图
+│   │   │   └── user.vue                        // 个人中心视图
 │   │   ├── home.vue                            // 主页视图
 │   │   └── login.vue                           // 登陆视图
 │   ├── router                                  // 路由文件
@@ -74,7 +81,8 @@ npm run build --report
 项目编码规范
 -------
 ```
-    >命名要语义化<
+    >命名语义化<
+    
 ├──命名
 │   ├── 文件             // 以驼峰命名
 │   ├── 页面视图         // 以驼峰命名

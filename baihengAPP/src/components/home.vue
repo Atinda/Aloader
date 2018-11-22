@@ -14,7 +14,7 @@
         <i slot="icon" class="fa fa-comment-o fa-lg"></i>
         <span slot="label">消息</span>
       </tabbar-item>
-      <tabbar-item  @on-item-click="goto('mailist')">
+      <tabbar-item @on-item-click="goto('mailist')">
         <i slot="icon" class="fa fa-address-book-o fa-lg"></i>
         <span slot="label">通讯</span>
       </tabbar-item>
@@ -30,13 +30,14 @@
 export default {
   name: "Home",
   data() {
-    return {};
+    return {
+      selected:'homepage'
+    };
   },
   methods: {
     // 自定义的函数
     goto: function(i) {
-      console.log(i);
-      // this.$router.push({ path: "./" + i });
+      this.$router.push({ path: i });
     }
   },
   computed: {
@@ -55,6 +56,7 @@ export default {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  font-size: .4rem;
   .router-views {
     flex: 1;
   }

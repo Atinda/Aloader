@@ -153,12 +153,8 @@ export default {
       //   }, 500);
     }, 
     goPage:function(item){
-        console.log(item);
-        this.$router.push({ name: item.url});
-        if(item.url == "pReporting"){
-            // this.$router.push({ name: 'pReporting'});
-        }
-      
+        console.log(item,item.url,this.$route);
+        this.$router.push('/'+item.url);
     }
   },
   mounted: function() {
