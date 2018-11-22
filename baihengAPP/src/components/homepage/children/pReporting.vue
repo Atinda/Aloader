@@ -16,40 +16,49 @@
                 <loading :show="show"></loading>
               </div>
               <div class="tabview-car tabview-car-mactype" v-if="active">
-                <x-button class="car-Submission" type="primary" @click.native="nextStep1">下一步</x-button>
-                 <div class="car-info">选择机台</div>
+                <div class="car-info">
+                  <div class="info-left">
+                    <span 
+                    class="left-macType" 
+                    v-for="(item,index) in this.macTypeList" 
+                    :key="index"
+                    @click="select(item)"
+                    >{{item.titil}}</span>
+                  </div>
+                  <div class="info-right">
+                    <div  class="right-car" v-for="(item,index) in this.macTypeList" 
+                    :key="index">
+                      <div v-for="(item,index) in item.macCodeInfo" :key="index">{{item.macCode}}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btnBox">
+                  <x-button class="car-Submission" type="primary" @click.native="nextStep1">下一步</x-button>
+                </div>
               </div>
               <div class="tabview-car tabview-car-time" v-if="active1">
-                
-                <x-button class="car-Submission" type="primary" @click.native="prevStep2">上一步</x-button>
-                <x-button class="car-Submission" type="primary" @click.native="nextStep2">下一步</x-button>
                 <div class="car-info">选择时间</div>
+                <div class="btnBox">
+                  <x-button class="car-Submission" type="primary" @click.native="prevStep2">上一步</x-button>
+                <x-button class="car-Submission" type="primary" @click.native="nextStep2">下一步</x-button>
+                </div>
               </div>
               <div class="tabview-car tabview-car-rice" v-if="active2">
-                
-                <x-button class="car-Submission" type="primary" @click.native="prevStep3">上一步</x-button>
-                <x-button class="car-Submission" type="primary" @click.native="nextStep3">下一步</x-button>
                 <div class="car-info">生产米数</div>
+                <div class="btnBox">
+                   <x-button class="car-Submission" type="primary" @click.native="prevStep3">上一步</x-button>
+                <x-button class="car-Submission" type="primary" @click.native="nextStep3">下一步</x-button>
+                </div>
               </div>
               <div class="tabview-car tabview-car-sure" v-if="active3">
-                
-                <x-button class="car-Submission" type="primary" @click.native="prevStep4">上一步</x-button>
+                <div class="car-info">确定报工</div>
+                <div class="btnBox">
+                  <x-button class="car-Submission" type="primary" @click.native="prevStep4">上一步</x-button>
                 <x-button class="car-Submission" type="primary" @click.native="cancel">取消报工</x-button>
                 <x-button class="car-Submission" type="primary" @click.native="sure">确定报工</x-button>
-                <div class="car-info">确定报工</div>
+                </div>
               </div>
             </div>
-            <flexbox>
-              <flexbox-item>
-                <x-button type="default">default</x-button>
-              </flexbox-item>
-              <flexbox-item>
-                <x-button type="primary">primary</x-button>
-              </flexbox-item>
-              <flexbox-item>
-                <x-button type="warn">Delete</x-button>
-              </flexbox-item>
-            </flexbox>
         </div>
   </div>
 </template>
@@ -75,10 +84,85 @@ export default {
       isdone2:false,
       isdone3:false,
       isdone4:false,
+
+      macTypeList:[
+        {titil:"押出",
+        id:1,
+        macCodeInfo:[
+          {macCode:"I2-01",macType:1,image:"#"},
+          {macCode:"I2-02",macType:2,image:"#"},
+          {macCode:"I2-03",macType:3,image:"#"},
+          {macCode:"I2-04",macType:2,image:"#"},
+          {macCode:"I2-05",macType:0,image:"#"},
+          {macCode:"I2-06",macType:1,image:"#"},]
+        },
+        {titil:"包带",
+        id:2,
+        macCodeInfo:[
+          {macCode:"B2-01",macType:1,image:"#"},
+          {macCode:"B2-02",macType:2,image:"#"},
+          {macCode:"B2-03",macType:3,image:"#"},
+          {macCode:"B2-04",macType:2,image:"#"},
+          {macCode:"B2-05",macType:0,image:"#"},
+          {macCode:"B2-06",macType:1,image:"#"},]
+        },
+        {titil:"对绞",
+        id:3,
+        macCodeInfo:[
+          {macCode:"C2-01",macType:1,image:"#"},
+          {macCode:"C2-02",macType:2,image:"#"},
+          {macCode:"C2-03",macType:3,image:"#"},
+          {macCode:"C2-04",macType:2,image:"#"},
+          {macCode:"C2-05",macType:0,image:"#"},
+          {macCode:"C2-06",macType:1,image:"#"},]
+        },
+        {titil:"缠绕",
+        id:4,
+        macCodeInfo:[
+          {macCode:"ID2-01",macType:1,image:"#"},
+          {macCode:"ID2-02",macType:2,image:"#"},
+          {macCode:"ID2-03",macType:3,image:"#"},
+          {macCode:"ID2-04",macType:2,image:"#"},
+          {macCode:"ID2-05",macType:0,image:"#"},
+          {macCode:"ID2-06",macType:1,image:"#"},]
+        },
+        {titil:"集合",
+        id:5,
+        macCodeInfo:[
+          {macCode:"I2-01",macType:1,image:"#"},
+          {macCode:"I2-02",macType:2,image:"#"},
+          {macCode:"I2-03",macType:3,image:"#"},
+          {macCode:"I2-04",macType:2,image:"#"},
+          {macCode:"I2-05",macType:0,image:"#"},
+          {macCode:"I2-06",macType:1,image:"#"},]
+        },
+        {titil:"编织",
+        id:6,
+        macCodeInfo:[
+          {macCode:"I2-01",macType:1,image:"#"},
+          {macCode:"I2-02",macType:2,image:"#"},
+          {macCode:"I2-03",macType:3,image:"#"},
+          {macCode:"I2-04",macType:2,image:"#"},
+          {macCode:"I2-05",macType:0,image:"#"},
+          {macCode:"I2-06",macType:1,image:"#"},]
+        },
+            {titil:"外被",
+        id:7,
+        macCodeInfo:[
+          {macCode:"I2-01",macType:1,image:"#"},
+          {macCode:"I2-02",macType:2,image:"#"},
+          {macCode:"I2-03",macType:3,image:"#"},
+          {macCode:"I2-04",macType:2,image:"#"},
+          {macCode:"I2-05",macType:0,image:"#"},
+          {macCode:"I2-06",macType:1,image:"#"},]
+        },
+      ]
     };
   },
   methods: {
-    // 自定义的函数 
+    select:function(item){
+      console.log(item)
+    },
     nextStep1: function() {
       this.isdone1 = true;
       this.active = false;
@@ -145,15 +229,32 @@ export default {
 
 <style lang="less" scoped>
 .pSchedule {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   font-size: .4rem;
   .pReporting-content {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     .weui-wepay-flow__process {
       background-color: #00d0ff;
     }
+    .weui-wepay-flow{
+      padding: .1rem;
+      height: .5rem;
+      .weui-wepay-flow__bd{
+        .weui-wepay-flow__li{
+          .weui-wepay-flow__title-bottom{
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    
     .tabview {
-      height: 100%;
+      flex: 1;
       .car-Submission {
         background: #00d0ff;
       }
@@ -164,8 +265,41 @@ export default {
         left: 22%;
       }
       .tabview-car{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         .car-info{
-          height: 5rem;
+          display: flex;
+          flex: 1;
+          .info-left{
+            display: flex;
+            flex-direction:column;
+            width: 10%;
+            font-size: .3rem;
+            .left-macType{
+              border-bottom: .01rem solid #909090;
+              background: #28def1;
+              margin-top: .03rem;
+              text-align: center;
+            }
+          }
+          .info-right{
+            // flex: 1;
+            width: 90%;
+            display: flex;
+            flex-direction:column;
+            overflow: auto;
+          }
+        }
+        .btnBox{
+          display: flex;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          .car-Submission{
+            margin:.1rem auto; 
+            width: 30%;
+          }
         }
       }
     }

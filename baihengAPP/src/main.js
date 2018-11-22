@@ -22,6 +22,8 @@ Vue.component('flow', Flow);
 Vue.component('flow-state', FlowState);
 Vue.component('flow-line', FlowLine);
 Vue.component('loading', Loading);
+Vue.component('flexbox', Flexbox);
+Vue.component('flexbox-item', FlexboxItem);
 
 
 Vue.use(LoadingPlugin)
