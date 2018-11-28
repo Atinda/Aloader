@@ -1,7 +1,7 @@
 <template>
   <div class="pSchedule">
      <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">生产进度</x-header>
-      <div class="pReporting-content" style="display:none">
+      <div class="pSchedule-content" style="display:none">
             <flow>
                 <flow-state state="1" title="选择机台" :is-done="isdone1"></flow-state>
                 <flow-line :is-done="isdone1"></flow-line>

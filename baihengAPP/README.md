@@ -39,8 +39,11 @@ npm run build --report
 │   │   ├── index.js                            // API配置
 │   ├── assets                                  // 资源文件
 │   │   ├── images                              // 图片文件
-│   │   │   ├── homepage                        // 主页图片
-│   │   │   └── logo                            // logo标识
+│   │   │   ├── homepage                        // 主页
+│   │   │   │   └── pReporting                  // 生产报工
+│   │   │   ├── information                     // 消息视图
+│   │   │   ├── logo                            // logo标识
+│   │   │   └── user                            // 个人中心
 │   │   ├── scripts                             // script文件
 │   │   └── styles                              // style文件
 │   ├── common                                  // 公共组件文件
