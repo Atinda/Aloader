@@ -35,7 +35,7 @@ export default {
             { news: "给你一张无BUG符", newsId: 2, time: "2018/10/30 10:58:12" }
           ]
         },
-        {name: "包文德",id: "01",positon: "神一样的",unread:3,headPortrait:  require("../../assets/images/information/newtop2.png"),
+        {name: "包伦德",id: "01",positon: "神一样的",unread:3,headPortrait:  require("../../assets/images/information/newtop2.png"),
           chatInfo: [
             {news: "周一开财务通报会",newsId: 1,time: "2018/10/30 10:11:11"},
             { news: "你说啥？你再说一遍", newsId: 2, time: "2018/10/30 12:19:12" }

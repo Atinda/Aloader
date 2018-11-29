@@ -17,14 +17,14 @@
         <div class="tabview">
           <div class="tabview-car tabview-car-mactype" v-show="active">
             <div class="car-info" style="height:0px;">
-              <div class="info-left">
+              <!-- <div class="info-left">
                 <span 
                 class="left-macType" 
                 v-for="(item,index) in this.macTypeList" 
                 :key="index"
                 @click="select(item)"
                 >{{item.titil}}</span>
-              </div>
+              </div> -->
               <div class="info-right">
                 <div  class="right-car" v-for="(item,index) in this.macTypeList" :key="index" >
                   <div class="right-car-info" 
@@ -59,7 +59,7 @@
                   <x-input title="生产米数" :is-type="be2333" placeholder="I'm placeholder"></x-input>
                 </group> -->
                 <span>生产米数:</span>
-                <x-input type="number" placeholder="请输入生产米数！" novalidate :icon-type="iconType" placeholder-align="right"></x-input>
+                <x-input type="number" placeholder="请输入生产米数！" novalidate placeholder-align="right"></x-input>
               </div>
             </div>
               
@@ -321,7 +321,7 @@ export default {
           }
           .info-right{
             // flex: 1;
-            width: 90%;
+            width: 100%;
             display: flex;
             flex-direction:column;
             overflow: auto;

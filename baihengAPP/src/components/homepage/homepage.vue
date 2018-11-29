@@ -2,7 +2,7 @@
   <div class="homepage">
     <header class="home-header" :style="setBG">
       <div class="header-top">
-        <div class="scavenging">扫码</div>
+        <div class="scavenging" @click="scavenging()">扫码</div>
         <div class="search"><input type="text" placeholder="搜索应用"/></div>
         <div class="information" @click="goPageInfo"><span class="fa fa-envelope-o"></span></div>
       </div>
@@ -27,6 +27,7 @@
             <span class="text"><i :class="item.icon" :style="{color:item.color}"></i> {{item.text}}</span>
             <div class="center">
                 内容
+                
             </div>
         </div>
     </div>
@@ -144,6 +145,9 @@ export default {
     };
   },
   methods: {
+    scavenging:function(){
+      
+    },
     goPageInfo: function() {
     //   this.$router.push({ path: "./information" });
     },
