@@ -68,6 +68,11 @@ npm run build --report
 │   │   │   └── mailist.vue                     // 联系人视图
 │   │   ├── user                                // 个人中心视图文件
 │   │   │   ├── children                        // 子视图文件
+│   │   │   │   ├── contact.vue                 // 联系方式视图
+│   │   │   │   ├── myQRcode.vue                // 我的二维码视图
+│   │   │   │   ├── newtop.vue                  // 关于新杰视图
+│   │   │   │   ├── password.vue                // 修改密码视图
+│   │   │   │   ├── setUp.vue                   // 设置视图
 │   │   │   │   └── userInfo.vue                // 个人信息视图
 │   │   │   └── user.vue                        // 个人中心视图
 │   │   ├── home.vue                            // 主页视图
@@ -97,7 +102,7 @@ npm run build --report
 │   ├── 页面视图         // 以驼峰命名
 │   ├── 函数             // 以驼峰命名
 │   ├── css
-│   │   ├── class        // 以驼峰+中划线- calss-name 子元素开头包含一个父元素的类名
+│   │   ├── class        // 以驼峰+中划线- calssName-childreName 子元素开头包含一个父元素的类名
 │   │   └── id           // 以驼峰+下划线——  idName_childreName 子元素开头包含一个父元素的id
 ├──
 
