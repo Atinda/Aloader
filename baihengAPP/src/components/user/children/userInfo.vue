@@ -1,12 +1,15 @@
 <template>
     <div class="userInfo">
          <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">个人信息</x-header>
-        <ul>
-            <li v-for="(item,index) in infoList" :key="index"><span>{{item.text}}</span><input :value="item.input"/></li>
-        </ul>
+        <div class="userInfo-content">
+            <span class="content-rows" v-for="(item,index) in infoList" :key="index">
+                <span>{{item.text}}</span>
+                <img v-if="item.img" :src="item.img" alt="头像" style="width:.8rem;height:.8rem;border-radius:.08rem;padding:.03rem;"/>
+                <input v-else :value="item.input"/>
+                </span>
+        </div>
     </div>
 </template>
-
 <script>
 
 export default {
@@ -15,7 +18,7 @@ export default {
         return{
             infoData: { text: "个人信息", bank: "userinfo", more: null },
             infoList:[
-                {text:'头像',input:'照片'},
+                {text:'头像',input:'照片',img:require("../../../assets/images/user/title.jpg"),},
                 {text:'账号',input:'System'},
                 {text:'工号',input:'System'},
                 {text:'姓名',input:'超级管理员'},
@@ -35,20 +38,23 @@ export default {
     font-size: .3rem;
     height: 100%;
     background: #efeff4;
-    ul{
-        li{
+    .userInfo-content{
+        display: flex;
+        flex-direction: column;
+        .content-rows{
             display: flex;
+            flex: 1;
             justify-content: space-between;
             background: #ffffff;
             padding: 0 .2rem;
             height: .8rem;
-            width: 95%;
             line-height: .8rem;
-            border-bottom: 1px solid #909090;
+            border-bottom: .01rem solid #909090;
             input{
+                height: 95%;
                 border: none;
                 text-align: right;
-                // border-bottom: 1px solid #909090;
+                font-size: .2rem;
             }
         }
     }

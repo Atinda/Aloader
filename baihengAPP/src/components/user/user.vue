@@ -4,7 +4,7 @@
     <!-- <router-view></router-view> -->
     <header>
       <span class="header-top">个人中心</span>
-      <div class="header-bottom" @click="goUserInfo">
+      <div class="header-bottom" @click="goUserInfo('userInfo')">
         <img class="bottom-left" :src="userTitle" alt="头像">
         <span class="bottom-middle">
           <span class="user-name">超级管理员</span>
@@ -31,8 +31,6 @@
       </div>
     </div>
     <div class="user-signOut">
-      <!-- <input type="file" accept="image/*"  capture="camera"/> -->
-      <!-- <x-button class="car-Submission" type="primary" @click.native="sweepCode">扫一扫</x-button> -->
       <span class="tel">
         <a href="tel:0769-81886936">联系新杰</a>
       </span>
@@ -49,11 +47,11 @@ export default {
     return {
       userTitle: require("../../assets/images/user/title.jpg"),
       carData: [
-        { text: "联系方式", icon: "fa fa-phone" },
-        { text: "我的二维码", icon: "fa fa-barcode" },
-        { text: "修改密码", icon: "fa fa-edit", active: true },
-        { text: "关于新杰", icon: "fa fa-bookmark-o" },
-        { text: "设置", icon: "fa fa-cog", active: true }
+        { text: "联系方式", id:"contact", icon: "fa fa-phone" },
+        { text: "我的二维码",id:"myQRcode", icon: "fa fa-barcode" },
+        { text: "修改密码",id:"password",icon: "fa fa-edit", active: true },
+        { text: "关于新杰",id:"newtop", icon: "fa fa-bookmark-o" },
+        { text: "设置",id:"setUp", icon: "fa fa-cog", active: true }
       ]
     };
   },
@@ -101,40 +99,43 @@ export default {
                     self.$MessageAlert('jssdk请求出错:' + err.msg)}
             )
     },
-     weixinScan(){
-            letself = this
-            wx.ready(function() {
-                wx.checkJsApi({
-                    jsApiList: ['scanQRCode'],
-                    success: function(res) {
-                        wx.scanQRCode({
-                            needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果
-                            scanType: ['qrCode','barCode'], // 可以指定扫二维码还是一维码，默认二者都有
-                            success: function(res) {
-                                console.log('扫描结果-->', res) //当needResult 为 1 时，扫码返回的结果
-                                let result = res.resultStr
-                                if(result && result.indexOf(',')) {
-                                    let resultArr = result.split(',')
-                                    if(resultArr[1]) {
-                                    result = resultArr[1]
-                                } else {
-                                result = resultArr[0]
-                                }}
+    weixinScan(){
+        letself = this
+        wx.ready(function() {
+            wx.checkJsApi({
+                jsApiList: ['scanQRCode'],
+                success: function(res) {
+                    wx.scanQRCode({
+                        needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果
+                        scanType: ['qrCode','barCode'], // 可以指定扫二维码还是一维码，默认二者都有
+                        success: function(res) {
+                            console.log('扫描结果-->', res) //当needResult 为 1 时，扫码返回的结果
+                            let result = res.resultStr
+                            if(result && result.indexOf(',')) {
+                                let resultArr = result.split(',')
+                                if(resultArr[1]) {
+                                result = resultArr[1]
+                            } else {
+                            result = resultArr[0]
+                            }}
 
-                                self.$MessageAlert(result)
-                            }
-                        })
-                    }
-                })
+                            self.$MessageAlert(result)
+                        }
+                    })
+                }
             })
-        },
-    goUserInfo: function() {
-      this.$router.push({ path: "userInfo" });
-      console.log("个人中心");
+        })
     },
+    // 个人中心
+    goUserInfo: function(index) {
+      this.$router.push('/'+index);
+    },
+    // 子页导航
     goCar: function(item) {
       console.log(item);
+      this.$router.push('/'+item.id);
     },
+    // 退出登录
     signOut: function() {
       this.$router.push({ path: "/" });
     }
