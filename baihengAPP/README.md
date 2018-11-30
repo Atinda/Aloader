@@ -73,7 +73,13 @@ npm run build --report
 │   │   ├── home.vue                            // 主页视图
 │   │   └── login.vue                           // 登陆视图
 │   ├── router                                  // 路由文件(页面跳转)
-│   │   └── index.js                            // 路由的配置
+│   │   ├── home.js                             // 主页路由
+│   │   ├── homepage.js                         // 首页路由
+│   │   ├── index.js                            // 总路由的配置
+│   │   ├── information.js                      // 消息路由
+│   │   ├── login.js                            // 登录路由
+│   │   ├── mailist.js                          // 联系人路由
+│   │   └── user.js                             // 个人中心路由
 │   ├── store                                   // 项目的状态管理vuex文件
 │   ├── App.vue                                 // 整个工程项目的页面入口视图
 │   └── main.js                                 // 程序入口js，加载各种公共组件

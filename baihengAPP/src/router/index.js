@@ -12,7 +12,7 @@ import userRouter from './user';
 Vue.use(Router);
 
 const routes = [
-  // 使用扩展运算符展开引进router
+  // 扩展运算符展开引进router
   ...loginRouter,        
   ...homeRouter,        
   ...homepageRouter,        
