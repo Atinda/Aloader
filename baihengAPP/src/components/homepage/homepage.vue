@@ -2,7 +2,10 @@
   <div class="homepage">
     <header class="home-header" :style="setBG">
       <div class="header-top">
-        <div class="scavenging" @click="scavenging()">扫码</div>
+        <div class="scavenging" @click="scavenging()">
+          <input type="file" accept="image/*"  capture="camera"/>
+          <span><i class="fa fa-camera-retro"></i></span>
+        </div>
         <div class="search"><input type="text" placeholder="搜索应用"/></div>
         <div class="information" @click="goPageInfo"><span class="fa fa-envelope-o"></span></div>
       </div>
@@ -192,6 +195,22 @@ export default {
         width: .95rem;
         text-align: center;
         font-size: .3rem;
+      }
+      .scavenging{
+        input[type='file']{
+          height: .40rem;
+          width: .70rem;
+          left: .1rem;
+          position: absolute; //设置为绝对定位，不会影响到其他元素
+          opacity: 0;   //透明度为0
+          filter: alpha(opacity=0);
+          cursor: pointer;
+        }
+        span{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
       }
       .search {
         width: 100%;
