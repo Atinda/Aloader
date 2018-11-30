@@ -5,7 +5,7 @@ import store from './store';
 import 'font-awesome/css/font-awesome.css';
 import { Divider ,Group,XInput,Cell,XButton,Tabbar,TabbarItem,XHeader,
    Tab,TabItem,Flow, FlowState, FlowLine,Loading,LoadingPlugin,
-   Flexbox,FlexboxItem,Rater ,Panel 
+   Flexbox,FlexboxItem,Rater ,Toast,Panel 
   } from 'vux';
 
 Vue.component('divider', Divider);
@@ -25,6 +25,7 @@ Vue.component('loading', Loading);
 Vue.component('flexbox', Flexbox);
 Vue.component('flexbox-item', FlexboxItem);
 Vue.component('rater', Rater);
+Vue.component('toast', Toast);
 // Vue.component('panel', Panel);
 
 

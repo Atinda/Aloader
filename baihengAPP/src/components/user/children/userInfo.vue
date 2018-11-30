@@ -23,7 +23,7 @@ export default {
                 {text:'工号',input:'System'},
                 {text:'姓名',input:'超级管理员'},
                 {text:'性别',input:'你猜'},
-                {text:'公司',input:'集团'},
+                {text:'公司',input:'新杰集团'},
                 {text:'部门',input:'IT'},
                 {text:'岗位',input:'猿'},
                 {text:'角色',input:'同上'}
