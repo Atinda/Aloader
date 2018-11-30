@@ -3,7 +3,7 @@
     <header class="home-header" :style="setBG">
       <div class="header-top">
         <div class="scavenging" @click="scavenging()">
-          <input type="file" accept="image/*"  capture="camera"/>
+          <input type="file" accept="image/*" capture="camera"/>
           <span><i class="fa fa-camera-retro"></i></span>
         </div>
         <div class="search"><input type="text" placeholder="搜索应用"/></div>
@@ -201,7 +201,7 @@ export default {
           height: .40rem;
           width: .70rem;
           left: .1rem;
-          position: absolute; //设置为绝对定位，不会影响到其他元素
+          position: absolute;
           opacity: 0;   //透明度为0
           filter: alpha(opacity=0);
           cursor: pointer;
@@ -237,6 +237,7 @@ export default {
     .task-More {
       min-width: 25%;
       height: 50%;
+      padding-top: .2rem;
       .icon {
         border-radius: 50%;
         text-align: center;

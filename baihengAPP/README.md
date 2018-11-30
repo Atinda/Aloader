@@ -72,7 +72,7 @@ npm run build --report
 │   │   │   └── user.vue                        // 个人中心视图
 │   │   ├── home.vue                            // 主页视图
 │   │   └── login.vue                           // 登陆视图
-│   ├── router                                  // 路由文件
+│   ├── router                                  // 路由文件(页面跳转)
 │   │   └── index.js                            // 路由的配置
 │   ├── store                                   // 项目的状态管理vuex文件
 │   ├── App.vue                                 // 整个工程项目的页面入口视图

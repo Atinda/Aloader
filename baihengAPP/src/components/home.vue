@@ -8,19 +8,19 @@
     <tabbar>
       <tabbar-item selected @on-item-click="goto('homepage')">
         <i slot="icon" class="fa fa-home fa-lg"></i>
-        <span slot="label">主页</span>
+        <!-- <span slot="label">主页</span> -->
       </tabbar-item>
       <tabbar-item show-dot @on-item-click="goto('information')">
         <i slot="icon" class="fa fa-comment-o fa-lg"></i>
-        <span slot="label">消息</span>
+        <!-- <span slot="label">消息</span> -->
       </tabbar-item>
       <tabbar-item @on-item-click="goto('mailist')">
         <i slot="icon" class="fa fa-address-book-o fa-lg"></i>
-        <span slot="label">通讯</span>
+        <!-- <span slot="label">通讯</span> -->
       </tabbar-item>
       <tabbar-item  @on-item-click="goto('user')">
         <i slot="icon" class="fa fa-user fa-lg"></i>
-        <span slot="label">我的</span>
+        <!-- <span slot="label">我的</span> -->
       </tabbar-item>
     </tabbar>
   </div>
@@ -51,7 +51,6 @@ export default {
 
 <style lang="less" scoped>
 .home {
-  // background: #00e6ff;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -59,6 +58,10 @@ export default {
   font-size: .4rem;
   .router-views {
     flex: 1;
+  }
+  
+  .weui-tabbar{
+    padding-top: .3rem;
   }
   p {
     margin: 0;
