@@ -91,7 +91,8 @@ npm run build --report
 ├── index.html                                  // 入口html
 
 ```
-![Image discription]https://github.com/ATwins-8/newtop/blob/master/baihengAPP/src/assets/images/designChart/%E7%99%BE%E4%BA%A8APP%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E9%9C%80%E6%B1%82%E5%9B%BE.png
+![Image discription]newtop/baihengAPP/src/assets/images/designChart/百亨APP项目结构需求图.png
+      
 
 项目编码规范
 -------
