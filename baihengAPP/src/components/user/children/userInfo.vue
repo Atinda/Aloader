@@ -51,7 +51,7 @@ export default {
             line-height: .8rem;
             border-bottom: .01rem solid #909090;
             input{
-                height: 95%;
+                height: 92%;
                 border: none;
                 text-align: right;
                 font-size: .2rem;

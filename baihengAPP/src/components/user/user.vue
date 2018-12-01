@@ -183,6 +183,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@width:1rem;
 .user {
   height: 100%;
   font-size: 0.3rem;
@@ -198,7 +199,7 @@ export default {
     }
     .header-bottom {
       display: flex;
-      margin-top: 1rem;
+      margin-top: @width;
       height: 3rem;
       margin-bottom: 0.1rem;
       .bottom-left {
@@ -222,7 +223,7 @@ export default {
       .bottom-right {
         text-align: right;
         flex: 1;
-        line-height: 1rem;
+        line-height: @width;
         margin-right: 0.3rem;
       }
     }
