@@ -16,7 +16,7 @@ export default new vuex.Store({
     mutations,          // 提交状态修改
     actions,            // 看接受异步操作的提交状态，和mutations类似
     modules:{           // store的子模块
-        login,
-        home
+        login:login,
+        home:home
     }
 });

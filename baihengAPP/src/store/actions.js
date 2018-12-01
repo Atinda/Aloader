@@ -1,4 +1,4 @@
-const actions = {
+const actions = {           // 异步可以在此操作
     
 };
 
