@@ -91,7 +91,7 @@ npm run build --report
 ├── index.html                                  // 入口html
 
 ```
-![Image discription]newtop/baihengAPP/src/assets/images/designChart/百亨APP项目结构需求图.png
+![Image discription](https://raw.github.com/ATwins-8/newtop/baihengAPP/src/assets/images/designChart/百亨APP项目结构需求图.png)
       
 
 项目编码规范
