@@ -58,13 +58,6 @@ export default {
   watch:{               // 监听属性
 
   },
-    // 7·实例销毁之前调用，在这一步，实例仍然完全可用
-  beforeDestroy:function(){  
-    console.log(this.$store.state.home.tabbarBtnShow);
-    // this.$store.mutations.home.commit('showActive',"heihei ");
-    this.$store.state.home.tabbarBtnShow = "vchat赋值"     
-    console.log('beforeDestroy 实例销毁之前钩子执行...');
-  },
 }
 </script>
 

@@ -38,12 +38,6 @@ export default {
       this.showPositionValue = true
     },
   },
-  computed:{            // 计算属性
-
-  },
-  watch:{               // 监听属性
-
-  }
 }
 </script>
 

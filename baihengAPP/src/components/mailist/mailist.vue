@@ -93,6 +93,9 @@ export default {
   watch:{               // 监听属性
 
   },
+  mounted: function() {
+    this.$store.commit("h_showActive","mailist")
+  },
 }
 </script>
 

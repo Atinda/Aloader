@@ -21,15 +21,6 @@ export default {
       ]
     }
   },
-  methods:{             // 自定义的函数
-
-  },
-  computed:{            // 计算属性
-
-  },
-  watch:{               // 监听属性
-
-  },
 }
 </script>
 

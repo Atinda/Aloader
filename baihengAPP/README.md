@@ -86,6 +86,18 @@ npm run build --report
 │   │   ├── mailist.js                          // 联系人路由
 │   │   └── user.js                             // 个人中心路由
 │   ├── store                                   // 项目的状态管理vuex文件
+│   │   ├── modules                             // 子项状态文件
+│   │   │   ├── home.js                         // 主页状态
+│   │   │   ├── homepage.js                     // 首页状态
+│   │   │   ├── information.js                  // 消息状态
+│   │   │   ├── login.js                        // 登录状态
+│   │   │   ├── mailist.js                      // 通讯状态
+│   │   │   └── user.js                         // 个人状态
+│   │   ├── actions.js                          // 提交状态修改(异步)
+│   │   ├── getters.js                          // 派生状态
+│   │   ├── index.js                            // 状态配置
+│   │   ├── mutations.js                        // 提交状态修改(同步)
+│   │   └── state.js                            // 存储状态
 │   ├── App.vue                                 // 整个工程项目的页面入口视图
 │   └── main.js                                 // 程序入口js，加载各种公共组件
 ├── index.html                                  // 入口html

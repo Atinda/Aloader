@@ -25,9 +25,9 @@ export default {
   },
    methods: {
     loginBtn:function(username,password) {
-      this.show = true;
-      this.text = '登陆中···';
       let _this = this;
+      _this.show = true;
+      _this.text = '登陆中···';
       setTimeout(function(){
         _this.$router.push({path:"/home"})
         if(!!username && !!password){
@@ -44,8 +44,6 @@ export default {
 .login{
   height: 100%;
   /* background: #00e6ff; */
-
-  
 }
 .login-car {
   height: 32%;

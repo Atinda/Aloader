@@ -165,8 +165,8 @@ export default {
     }
   },
   mounted: function() {
-    this.switchbg();
-  }
+    this.$store.commit("h_showActive","homepage")
+  },
 };
 </script>
 

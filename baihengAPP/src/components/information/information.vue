@@ -1,6 +1,5 @@
 <template>
   <div class="information">
-
           <div class="info-content">
             <div class="content-car" v-for="(item,index) in carData" :key="index" @click="getUserInfo(item)">
                 <div class="car-title"><span class="tipTotal"></span><img title="头像" :src="item.headPortrait"/></div>
@@ -81,6 +80,9 @@ export default {
   watch:{               // 监听属性
 
   },
+  mounted: function() {
+    this.$store.commit("h_showActive","information")
+  },
 }
 </script>
 
@@ -90,9 +92,6 @@ export default {
   .content-car {display: flex;border-radius: .08rem;height:1.2rem;margin-bottom:.18rem;background:#ffffff;
     .car-title{width: 1rem;height: 100%;text-align:center;line-height:1.2rem;
         .tipTotal{display: block; background: red;border-radius: 50%;color: #ffffff;height: .2rem;width: .2rem;}
-        // .tipTotal{display: flex;flex-direction:column;
-            // .mint-badge.is-error{max-height:.2rem;min-height: 0.1rem;max-width: .01rem;}
-            // }
         img{width: .8rem;}
     }
     .car-name{display: flex;flex-direction: column;justify-content: space-evenly; flex:1;height: 100%;
