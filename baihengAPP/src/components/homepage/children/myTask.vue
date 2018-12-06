@@ -2,7 +2,10 @@
   <div class="myTask">
      <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">我的任务</x-header>
      <div class="btnWrap">
-       <span class="listBtn" v-for="(item,index) in taskbtn" :key="index"><i :class="item.icon" :style="{color:item.color}"></i> {{item.title}}</span>
+       <span class="listBtn" 
+       v-for="(item,index) in taskbtn" 
+       :key="index"
+       @click="goto(item)"><i :class="item.icon" :style="{color:item.color}"></i> {{item.title}}</span>
      </div>
      <search
       @result-click="resultClick"
@@ -17,9 +20,6 @@
       ref="search">
       </search>
       <div class="task-list">
-        <!-- <group>
-          <cell title="keyword">{{ value }}</cell>
-        </group> -->
       </div>
   </div>
 </template>
@@ -46,10 +46,16 @@ export default {
         {id:2,title:"处理中事务标题",number:2018120028,content:"关于处理中事务事宜内容···",time:"2018-12-05"},
         {id:4,title:"待批复事务标题",number:2018120038,content:"关于待批复事务事宜内容···",time:"2018-12-03"},
         {id:1,title:"未处理事务标题",number:2018120086,content:"关于未处理事务事宜内容···",time:"2018-12-01"},
+        {id:1,title:"未处理事务标题",number:2018120086,content:"关于未处理事务事宜内容···",time:"2018-12-01"},
+        {id:1,title:"未处理事务标题",number:2018120086,content:"关于未处理事务事宜内容···",time:"2018-12-01"},
+        {id:1,title:"未处理事务标题",number:2018120086,content:"关于未处理事务事宜内容···",time:"2018-12-01"},
       ]
     }
   },
   methods:{             // 自定义的函数
+    goto(item){
+      console.log(item)
+    },
   // 点击行目标
     resultClick(item){
       console.log("1",item)
