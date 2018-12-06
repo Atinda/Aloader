@@ -270,100 +270,32 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.pReporting {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  font-size: .4rem;
-  .pReporting-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    .weui-wepay-flow__process {
-      background-color: #00d0ff;
-    }
-    .weui-wepay-flow{
-      padding: .1rem;
-      height: .5rem;
-      width: 88%;
-      margin: 0 auto;
-    }
-    .tabview {
-      flex: 1;
-      margin-top: .4rem;
-      .car-Submission {
-        background: #00d0ff;
-      }
-      .weui-toast{
-        width: 3rem;
-        min-height: 4rem;
-        margin-left: 0;
-        left: 22%;
-      }
-      .tabview-car{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        .car-info{
-          display: flex;
-          flex: 1;
-          .info-left{
-            display: flex;
-            flex-direction:column;
-            width: 10%;
-            font-size: .3rem;
-            .left-macType{
-              border-bottom: .01rem solid #909090;
-              background: #28def1;
-              margin-top: .03rem;
-              text-align: center;
-            }
+.pReporting {display: flex;flex-direction: column;height: 100%;font-size: .4rem;
+  .pReporting-content {display: flex;flex-direction: column;flex: 1;
+    .weui-wepay-flow__process {background-color: #00d0ff;}
+    .weui-wepay-flow{padding: .1rem;height: .5rem;width: 88%;margin: 0 auto;}
+    .tabview {flex: 1;margin-top: .4rem;
+      .car-Submission {background: #00d0ff;}
+      .weui-toast{width: 3rem;min-height: 4rem;margin-left: 0;left: 22%;}
+      .tabview-car{display: flex;flex-direction: column;height: 100%;
+        .car-info{display: flex;flex: 1;
+          .info-left{display: flex;flex-direction:column;width: 10%;font-size: .3rem;
+            .left-macType{border-bottom: .01rem solid #909090;background: #28def1;margin-top: .03rem;text-align: center;}
           }
-          .info-right{
-            // flex: 1;
-            width: 100%;
-            display: flex;
-            flex-direction:column;
-            overflow: auto;
+          .info-right{width: 100%;display: flex;flex-direction:column;overflow: auto;
             .right-car{
-              .right-car-info{
-                display: flex;
-                margin: 0 .1rem .1rem .1rem;
-                border-radius: .05rem;
-                background: #99eafd;
-                .info-mac-left{
-                  width: 1rem;
-                  height: 1rem;
-                  img{
-                    width: 100%;
-                    height: 100%;
-                  }
+              .right-car-info{display: flex;margin: 0 .1rem .1rem .1rem;border-radius: .05rem;background: #99eafd;
+                .info-mac-left{width: 1rem;height: 1rem;
+                  img{width: 100%;height: 100%;}
                 }
-                .info-mac-right{
-                  min-height: 1rem;
-                  font-size:.2rem;
-                  display: flex;
-                  flex-direction: column;
-                  flex: 1;
-                }
-                .addColor{
-                  min-width:.06rem;
-                  background:#0093ff;
-                  border-top-right-radius: .08rem;
-                  border-bottom-right-radius: .08rem;
-                }
+                .info-mac-right{display: flex;flex-direction: column;flex: 1;min-height: 1rem;font-size:.2rem;}
+                .addColor{min-width:.06rem;background:#0093ff;border-top-right-radius: .08rem;border-bottom-right-radius: .08rem;}
               }
             }
           }
         }
-        .btnBox{
-          display: flex;
-          bottom: 0;
-          width: 100%;
-          text-align: center;
-          .car-Submission{
-            margin:.1rem auto; 
-            width: 30%;
+        .btnBox{display: flex;bottom: 0;width: 100%;text-align: center;
+          .car-Submission{margin:.1rem auto; width: 30%;
           }
         }
       }
