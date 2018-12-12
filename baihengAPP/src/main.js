@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import store from './store';
-import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/css/font-awesome.css'; 
 import { Divider ,Group,XInput,Cell,XButton,Tabbar,TabbarItem,XHeader,
    Tab,TabItem,Flow, FlowState, FlowLine,Loading,LoadingPlugin,
    Flexbox,FlexboxItem,Rater ,Toast,Search,Panel,
