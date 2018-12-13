@@ -1,0 +1,59 @@
+.aLoader,
+.aLoader:before,
+.aLoader:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.aLoader-wrap{
+    height: 100%;
+    width: 100%;
+    /* min-width: 10px;
+    min-height: 10px; */
+}
+.circular {
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circular {
+    -webkit-animation: circular-turn 1s linear infinite;
+    animation: circular-turn 1s linear infinite;
+}
+
+.circular:before,
+.circular:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0;
+}
+
+.circular:after {
+    top: 0;
+}
+
+@-webkit-keyframes circular-turn {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circular-turn {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
